@@ -4,7 +4,20 @@
     display:flex;
     justify-content:flex-end;
     align-items: center;
-    padding:20px;
+    padding: 0 20px 10px 0;
     font-size: 2.1em;
+    flex-direction: column;
     overflow: hidden;
+    align-items: flex-end;
+}
+.display .main{
+
+}
+.display .operacao{
+    height: 20px;
+    margin-bottom: 30px;
+}
+.operacao span:last-child{
+    margin-left:18px;
+    color: #fa8231cc;
 }

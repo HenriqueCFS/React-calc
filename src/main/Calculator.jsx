@@ -66,7 +66,6 @@ export default class Calculator extends Component{
         }
     }
     addDigito(n){
-        console.log(typeof(this.state.displayValue))
         if (this.state.isZeroDiv){
             this.clearMemory()
         }else{
@@ -84,7 +83,6 @@ export default class Calculator extends Component{
                 const values = [...this.state.values]
                 values[i] = newValue
                 this.setState({values})
-                console.log(values)
             }
         }
     }
@@ -92,7 +90,7 @@ export default class Calculator extends Component{
     render(){
         return(
             <div className="calculator">
-                <Display value={this.state.displayValue} isZeroDiv={this.state.isZeroDiv}/>
+                <Display value={this.state.displayValue} operation={this.state.operation} prevValue={this.state.values[0]} showPrev={this.state.values[1] !== 0} isZeroDiv={this.state.isZeroDiv}/>
                 <Button label="AC" triple click={this.clearMemory}/>
                 <Button label="/" click={this.setOperation} operation  />
                 <Button label="7" click={this.addDigito}/>
