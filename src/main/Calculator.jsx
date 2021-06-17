@@ -52,6 +52,8 @@ export default class Calculator extends Component{
                             values[0] = values[0] / values[1]
                         }
                         break
+                    default:
+                        break
                 }
                 values[1] = 0
                 this.setState({displayValue: values[0],
