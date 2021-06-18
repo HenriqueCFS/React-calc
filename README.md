@@ -1,6 +1,9 @@
 # Calculadora React
 Esta calculadora foi desenvolvida usando o ReactJS durante meus estudos de JavaScript.
 
+Acessar:
+https://naughty-nobel-b8e188.netlify.app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
