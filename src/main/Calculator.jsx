@@ -61,21 +61,28 @@ export default class Calculator extends Component{
                             current: finish ? 0 : 1,
                             clearDisplay: !finish,
                             values})
+                
 
             }
         }
     }
     addDigito(n){
+        console.log(n)
         if (this.state.isZeroDiv){
             this.clearMemory()
         }else{
             if (n === '.'){
-                if (String(this.state.displayValue).includes('.')) return
-                n = this.state.displayValue === 0 ? 0 + n : n //Para o ponto não ficar sozinho por conta do clearDisplay    quando state.displayValue === 0
+                if (this.state.current === 1 && this.state.values[1] === 0){
+                    n = 0+n
+                }else{
+                    if (String(this.state.displayValue).includes('.')) return
+                    n = this.state.displayValue === 0  ? 0 + n : n //Para o ponto não ficar sozinho por conta do clearDisplay    quando state.displayValue === 0
+                }
             }
+            
             const clearDisplay = String(this.state.displayValue) === '0' || this.state.clearDisplay
             const currentValue = clearDisplay ? '' : this.state.displayValue
-            const displayValue = currentValue + n
+            const displayValue = n==='0.'? '0.' : currentValue + n
             this.setState({displayValue, clearDisplay: false})
             if (n !== '.'){
                 const i = this.state.current
@@ -85,6 +92,7 @@ export default class Calculator extends Component{
                 this.setState({values})
             }
         }
+        console.log(this.state.values)
     }
     
     render(){
