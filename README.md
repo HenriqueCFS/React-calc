@@ -1,7 +1,7 @@
-# Calculadora React
-Esta calculadora foi desenvolvida usando o ReactJS durante meus estudos de JavaScript.
+# React Calc
+This calculator was developed by me using ReactJS during my JavaScript studies.
 
-Acessar:
+Try it here:
 https://naughty-nobel-b8e188.netlify.app
 
 # Getting Started with Create React App
